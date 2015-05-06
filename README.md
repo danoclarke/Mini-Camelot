@@ -3,14 +3,14 @@ CS 6613 - Artificial Intelligence
 Spring 2015
 Project: Mini Camelot
 
-Installation
+## Installation
 
 Install the following dependencies:
 * [python 3.4](https://www.python.org/downloads/)
 * [Flask 0.10](http://flask.pocoo.org/)
 	* Once installed, open your terminal can go to the app directory in the source code
 		Run the following command and you should see output similar to this:
-		
+
 		```
 		$ python mini-camelot.py
 		* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
@@ -18,7 +18,7 @@ Install the following dependencies:
 * Open your browser and go to the given URL
 * Play your game! (To reset/restart, simply refresh the page).
 
-Design
+## Design
 	
 At first, I built the program to run in the console. You can see this by running the camelot.py file in the depreciated folder. The AI model uses the Minimax algorithm with Alpha-Beta Pruning. In addition to that, I build the graph search with an iterative depending approach. Initially the maximum depth the search will go to is a depth of 4. If the alpha-beta search is able to complete at this level in under 5 seconds, the max depth is incremented and the search is restarted. Since the game is infinite in depth (one could move his/her piece back and forth indefinitely), this seemed to be the best approach.
 It was specified that we should implement a cutoff once such that the search never exceeds 10 seconds, hence the cutoff test look first to see if a given node is a leaf node, then if the current run-time of the search is close to 10s, it uses the evaluation function I designed to provide an accurate depiction of the game in the given state.
