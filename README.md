@@ -6,15 +6,16 @@ Project: Mini Camelot
 Installation
 
 Install the following dependencies:
-python 3.4 (https://www.python.org/downloads/)
-Flask 0.10 (http://flask.pocoo.org/)
-	Once installed, open your terminal can go to the app directory in the source code
-	Run the following command ‘$ python mini-camelot.py’
-
-	You should see output similar to this:
-		‘* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)’
-Open your browser and go to the given URL
-Play your game! (To reset/restart, simply refresh the page).
+* [python 3.4](https://www.python.org/downloads/)
+* [Flask 0.10](http://flask.pocoo.org/)
+	* Once installed, open your terminal can go to the app directory in the source code
+		Run the following command and you should see output similar to this:
+			```
+			$ python mini-camelot.py
+			* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+			```
+* Open your browser and go to the given URL
+* Play your game! (To reset/restart, simply refresh the page).
 
 Design
 	
