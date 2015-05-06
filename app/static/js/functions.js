@@ -1,4 +1,11 @@
- $(document).on("click",".whitesel",function(){
+$(document).on("ready",function(){
+    w = $('.note').width();
+
+    d3.select('.whitesel').attr("cx",w/4);
+    d3.select('.blacksel').attr("cx",3*w/4);
+})
+
+$(document).on("click",".whitesel",function(){
     player_num = 1;
     d3.select('.note').style('display','none');
     d3.selectAll('.piece.white').style("cursor","pointer");

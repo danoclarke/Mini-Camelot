@@ -27,15 +27,12 @@
 
 		var player_num = 0;
 		d3.select('.note').html('Team White or Team Black?<br/>').style('display','block').style('opacity','1');
-		elem = d.getElementsByClassName('info')[0],
-		pad = {top:80,left:80,bottom:80,right:80},
 		
-		info_w = e.clientWidth/2;
 
 		var selecter = d3.select('.note').append('svg');
 		selecter.append("circle")
 			.classed("whitesel",true)
-	        .attr("cx",info_w/4)
+	        .attr("cx",0)
 	        .attr("cy",40)
 	        .attr("r",2*radius)
 	        .style("fill","#fff")
@@ -44,33 +41,13 @@
 	        .style("cursor","pointer");
 		selecter.append("circle")
 			.classed("blacksel",true)
-	        .attr("cx",2*info_w/4)
+	        .attr("cx",0)
 	        .attr("cy",40)
 	        .attr("r",2*radius)
 	        .style("fill","#000")
 	        .style("stroke","#ddd")
 	        .style("stroke-width","3")
 	        .style("cursor","pointer");
-
-		var drag = d3.behavior.drag()
-		.on("dragstart", function(){
-
-		})
-		.on("drag", function(){
-		    var node = d3.select(this);
-
-		    var coordinates = [0, 0];
-		    coordinates = d3.mouse('.board');
-		    var x0 = coordinates[0];
-		    var y0 = coordinates[1];
-		    //var x0 = parseFloat(node.attr("cx"));
-		    //var y0 = parseFloat(node.attr("cy"));
-
-		    node.attr("transform", "translate(" + y0 + "," + x0 + ")");
-		})
-		.on("dragend", function(){
-
-		});
 
 		var svg = d3.select(".board").append("svg")
 		.attr("width",w)
